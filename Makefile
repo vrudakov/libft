@@ -28,7 +28,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS) 
 	ar rc $(NAME) $(OBJECTS)
 
-$(OBJECT): $(SRCFLS)
+$(OBJECT)%.o $(SRCFLS)%.c
 	gcc -Wall -Wextra -Werror -c $(SRCFLS)
 
 clean:
